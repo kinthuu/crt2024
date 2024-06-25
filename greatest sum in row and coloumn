@@ -1,0 +1,56 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        
+    Scanner s=new Scanner(System.in);
+    int n=s.nextInt();
+    int m=s.nextInt();
+    int a[][]=new int[n][m];
+    for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<m;j++)
+        {
+        a[i][j]=s.nextInt();
+        }
+    }
+    int max_row=0,row_index=0;
+    for(int i=0;i<n;i++)
+    {
+            int row_sum=0; 
+            for(int j=0;j<m;j++)
+            {
+            row_sum=row_sum+a[i][j];
+            }
+        System.out.print(row_sum+" ");
+            if(row_sum>max_row)
+            {
+                max_row=row_sum;
+                row_index=i+1;
+            }
+    }
+        System.out.println();
+        System.out.println("Row "+row_index);
+    int max_col=0,col_index=0;
+    for(int j=0;j<m;j++)
+    {
+            int col_sum=0; 
+            for(int i=0;i<n;i++)
+            {
+            col_sum=col_sum+a[i][j];
+            }
+        System.out.print(col_sum+" ");
+            if(col_sum>max_col)
+            {
+                max_col=col_sum;
+                col_index=j+1;
+            }
+    }
+        System.out.println();
+    System.out.println("Column "+col_index);    
+    
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}

@@ -11,7 +11,7 @@ public static void main(String args[])
 		a[i]=s.nextInt();
 	}
 	Arrays.sort(a);
-	for(int i=0;i<n;i++)
+	for(int i=0;i<n/2;i++)
 	{
 		System.out.println(a[n-1-i]+" "+a[i]+" ");
 	}
